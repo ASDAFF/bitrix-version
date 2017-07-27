@@ -1,0 +1,61 @@
+.ygoda{
+	width:100%;
+}
+.ygoda .ygoda-title{
+	width:100%;
+	color:#666666;
+	font-size:17px;
+	font-weight:bold;
+	text-align:center;
+}
+.ygoda-current_day-head{
+	vertical-align:top;
+	font-size:14px;
+	font-weight:bold;
+	color:#333333;
+}
+.ygoda .ygoda-current_day-image{
+	float:left;
+	display:inline-block;
+	margin-right:15px;
+}
+.ygoda .ygoda-current_day-iformation{
+	font-size:14px;
+	color:#666666;
+	margin:30px 0px;
+}
+
+.ygoda .ygoda-day{
+	width:130px;
+	float:left;
+	font-size:12px;
+	padding:5px;
+	margin:0px 15px 15px 0px;
+	border:1px solid #060;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+}
+.ygoda .ygoda-day-image{
+	display:block;
+	float:left;
+	margin:0px 3px 3px 0px;
+}
+.ygoda .ygoda-day-date{
+	float:left;
+	font-weight:bold;
+}
+.ygoda .ygoda-day-chet .ygoda-day-date{
+	color:#996633;
+}
+.ygoda .ygoda-day-nechet .ygoda-day-date{
+	color:#006699;
+}
+.ygoda .ygoda-day-chet{
+	background-color:#FFFFCC;
+}
+
+.ygoda .ygoda-clear{
+	clear:both;
+}

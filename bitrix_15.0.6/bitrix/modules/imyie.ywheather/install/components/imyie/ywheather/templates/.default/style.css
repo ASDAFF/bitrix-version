@@ -1,0 +1,37 @@
+.ygoda{
+	width:150px;
+	height:93px;
+	border:1px solid #0099ff;
+	padding:3px;
+	text-align:center;
+	border-radius:5px;
+}
+.ygoda-title{
+	font-style:italic;
+	color:#0099ff;
+}
+.ygoda-type{
+	font-size:11px;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+.ygoda-temperature{
+	font-weight:bold;
+	width:90px;
+	margin:0 auto;
+	border:1px solid #0099ff;
+	border-radius:5px;
+}
+.ygoda-2temperature{
+	margin-top:5px;
+	font-size:12px;
+}
+span.ygoda-hot{
+	color:#FF0000;
+}
+span.ygoda-norm{
+	color:#666666;
+}
+span.ygoda-cold{
+	color:#0099FF;
+}

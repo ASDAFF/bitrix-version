@@ -1,0 +1,71 @@
+.ygoda-border{
+	width:160px;
+	padding:3px;
+	background-color:#9B8F98;
+	color:#CCCCCC;
+	font-size:12px;
+	border-radius:5px;
+}
+.ygoda{
+	width:160px;
+	background-color:#000000;
+	border-radius:5px;
+}
+.ygoda-img{
+	text-align:center;
+}
+.ygoda-fact-left{
+	float:left;
+	margin-left:5px;
+}
+.ygoda-fact-right{
+	float:right;
+	font-weight:bold;
+	font-size:22px;
+	color:#FFFFFF;
+	margin-right:5px;
+	margin-top:3px;
+}
+.ygoda-span-1{
+	color:#FFFFFF;
+	font-weight:bold;
+	font-size:14px;
+}
+.ygoda-days{
+	margin-top:3px;
+	width:160px;
+	float:left;
+	clear:both;
+	font-size:14px;
+	color:#FFFFFF;
+}
+.ygoda-oneday{
+	width:156px;
+	float:left;
+	border-top:1px solid #41273C;
+	padding:2px 2px 2px 2px;
+}
+.ygoda-oneday-bg1{
+	background-color:#41273C;
+}
+.ygoda-oneday-bg0{
+	background-color:#382133;
+}
+.ygoda-oneday-name{
+	float:left;
+	margin-left:5px;
+	margin-top:1px;
+}
+.ygoda-oneday-img{
+	float:right;
+	margin-right:5px;
+}
+.ygoda-oneday-temp{
+	float:right;
+	margin-right:5px;
+	width:33px;
+	margin-top:1px;
+}
+.ygoda-end{
+	clear:both;
+}

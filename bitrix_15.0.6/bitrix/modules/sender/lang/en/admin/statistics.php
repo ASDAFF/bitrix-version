@@ -1,0 +1,33 @@
+<?
+$MESS["sender_stat_title"] = "Statistics";
+$MESS["sender_stat_flt_mailing"] = "Newsletter";
+$MESS["sender_stat_flt_mailing_chain"] = "Message";
+$MESS["sender_stat_error_no_data"] = "No data. The message has never been sent or current sending has not completed.";
+$MESS["sender_stat_report"] = "Message report";
+$MESS["sender_stat_report_title"] = "Message of";
+$MESS["sender_stat_report_subject"] = "Subject:";
+$MESS["sender_stat_report_date_create"] = "Created on:";
+$MESS["sender_stat_report_date_sent"] = "Started on:";
+$MESS["sender_stat_report_cnt_all"] = "Total messages sent:";
+$MESS["sender_stat_report_cnt_in"] = "including:";
+$MESS["sender_stat_report_cnt_read"] = "Viewed:";
+$MESS["sender_stat_report_cnt_click"] = "Link clicks:";
+$MESS["sender_stat_report_cnt_error"] = "With errors:";
+$MESS["sender_stat_report_cnt_unsub"] = "Unsubscribed:";
+$MESS["sender_stat_graph"] = "Message performance";
+$MESS["sender_stat_graph_all"] = "Total e-mails sent";
+$MESS["sender_stat_graph_read"] = "Viewed";
+$MESS["sender_stat_graph_click"] = "E-mails with links clicks";
+$MESS["sender_stat_graph_unsub"] = "Unsubscribed";
+$MESS["sender_stat_graph_error"] = "Sending errors";
+$MESS["sender_stat_graphperiod"] = "Recurring newsletter performance";
+$MESS["sender_stat_graphperiod_all"] = "total:";
+$MESS["sender_stat_graphperiod_action"] = "Recipient actions";
+$MESS["sender_stat_graphperiod_cnt_all"] = "E-mails sent";
+$MESS["sender_stat_graphperiod_cnt_read"] = "Viewed";
+$MESS["sender_stat_graphperiod_cnt_click"] = "Link clicks";
+$MESS["sender_stat_graphperiod_cnt_unsub"] = "Unsubscribed";
+$MESS["POST_U_YES"] = "Yes";
+$MESS["POST_U_NO"] = "No";
+$MESS["MAIN_ALL"] = "(all)";
+?>

@@ -1,0 +1,29 @@
+.ygoda{
+	width:150px;
+	height:120px;
+	border:1px solid #CCCCCC;
+	padding:3px;
+	text-align:center;
+}
+.ygoda-title{
+	color:#990000;
+}
+.ygoda-type{
+	font-size:11px;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+.ygoda-temperature{
+	width:90px;
+	background-color:#FFFFCC;
+	margin:0 auto;
+}
+span.ygoda-hot{
+	color:#FF0000;
+}
+span.ygoda-norm{
+	color:#666666;
+}
+span.ygoda-cold{
+	color:#0099FF;
+}

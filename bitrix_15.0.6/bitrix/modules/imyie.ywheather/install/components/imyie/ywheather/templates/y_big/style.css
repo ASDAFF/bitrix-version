@@ -1,0 +1,34 @@
+.ygoda{
+	width:1006px;
+	height:126px;
+	border:1px solid #CCCCCC;
+	padding:3px;
+}
+.ygoda-title{
+	text-align:center;
+	color:#009900;
+	font-weight:bold;
+	border-bottom:1px dotted #CCCCCC;
+}
+.ygoda-image{
+	text-align:center;
+	padding:3px 0 3px 0;
+	border-bottom:1px dotted #CCCCCC;
+}
+.ygoda-day{
+	width:100px;
+	float:left;
+	text-align:center;
+	font-size:11px;
+	margin-top:4px;
+}
+.ygoda-day-chet{
+	background-color:#FFFFCC;
+}
+.ygoda-day-date{
+	color:#996633;
+}
+.ygoda-day-temperature{
+	padding-left:3px;
+	text-align:left;
+}

@@ -1,0 +1,80 @@
+.ygoda-bg{
+	width:250px;
+	height:250px;
+	background:url('img/bg.jpg') 0 0 no-repeat;
+}
+.ygoda{
+	width:250px;
+	height:250px;
+	background-color:#000000;
+	filter:alpha(opacity=80); /* IE 5.5+*/
+	-moz-opacity: 0.8; /* Mozilla 1.6 и ниже */
+	-khtml-opacity: 0.8; /* Konqueror 3.1, Safari 1.1 */
+	opacity: 0.8; /* CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9 */
+	color:#CCCCCC;
+	font-size:12px;
+}
+.ygoda-left_block{
+	float:left;
+	width:122px;
+}
+.ygoda-fact{
+	text-align:center;
+	font-style:italic;
+	margin-top:25px;
+	line-height:18px;
+}
+.ygoda-town{
+	font-size:14px;
+}
+.ygoda-temperature{
+	margin-top:20px;
+	text-align:center;
+}
+.ygoda-temp{
+	padding:5px 12px 5px 12px;
+	font-size:18px;
+	font-weight:bold;
+	border-radius:5px;
+}
+.ygoda-hot{
+	background-color:#cc3300;
+	color:#FFFFFF;
+}
+.ygoda-norm{
+	background-color:#FFFFFF;
+	color:#000000;
+}
+.ygoda-weather_type{
+	text-transform:uppercase;
+}
+.ygoda-cold{
+	background-color:#0066cc;
+	color:#FFFFFF;
+}
+.ygoda-img{
+	float:right;
+	width:122px;
+	height:127px;
+	margin-top:5px;
+	margin-right:5px;
+}
+.ygoda-moreinfo{
+	clear:both;
+	margin-top:5px;
+	line-height:18px;
+	text-align:center;
+	font-size:12px;
+}
+.ygoda-pogodadays{
+	margin-top:8px;
+}
+.ygoda-pogodadays-span{
+	margin:0 auto;
+	width:160px;
+	padding:5px 0 5px 0;
+	text-align:center;
+	background-color:#FFFFFF;
+	color:#000000;
+	border-radius:5px;
+}

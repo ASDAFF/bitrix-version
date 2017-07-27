@@ -1,0 +1,9 @@
+<?$APPLICATION->IncludeComponent(
+	"imyie:ywheather",
+	"",
+	array(
+		"COUNTRY" => "Rossiya",
+		"CITY" => "27962"
+	),
+	false
+);?>
