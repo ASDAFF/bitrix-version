@@ -1,0 +1,39 @@
+.bx-socialfooter{
+	margin: 0;
+}
+.bx-socialfooter ul {
+	padding: 0;
+	margin: 0;
+	display: block;
+	list-style: none;
+}
+.bx-socialfooter ul li {
+	padding: 0;
+}
+.bx-socialfooter ul li:hover a{
+	border: none;
+}
+.bx-socialfooter a.bx-socialfooter-icon {
+	display: block;
+	padding-top: 33.2%;
+	background-image: url(images/sprite.png);
+	background-repeat: no-repeat;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+	border-bottom: none;
+	border: none;
+	text-decoration: none;
+}
+.bx-socialfooter ul li a.fb {background-color:#2262a0;background-position: 0 0}
+.bx-socialfooter ul li a.vk {background-color:#366baa;background-position: 0 25%}
+.bx-socialfooter ul li a.tw {background-color:#23cbff;background-position: 0 50%}
+.bx-socialfooter ul li a.gp {background-color:#d95333;background-position: 0 75%}
+.bx-socialfooter ul li a.in {background-color:#326288;background-position: 0 100%}
+
+.bx-socialfooter ul li a.fb:hover {background-color:#1b4e7d;}
+.bx-socialfooter ul li a.vk:hover {background-color:#2b5688;}
+.bx-socialfooter ul li a.tw:hover {background-color:#1ca2cc;}
+.bx-socialfooter ul li a.gp:hover {background-color:#ae4229;}
+.bx-socialfooter ul li a.in:hover {background-color:#284e6d;}
+
+@media (max-width:480px) {.bx-socialfooter{display: none;}}

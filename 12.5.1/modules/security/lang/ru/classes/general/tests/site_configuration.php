@@ -1,0 +1,30 @@
+<?php
+$MESS["SECURITY_SITE_CHECKER_SiteConfigurationTest_NAME"] = "Проверка настроек сайта";
+
+$MESS["SECURITY_SITE_CHECKER_WAF_OFF"] = "Проактивный фильтр выключен";
+$MESS["SECURITY_SITE_CHECKER_WAF_OFF_DETAIL"] = "Выключенный проактивный фильтр ничем не поможет вашему сайту";
+$MESS["SECURITY_SITE_CHECKER_WAF_OFF_RECOMMENDATION"] = "Включить проактивный фильтр";
+$MESS["SECURITY_SITE_CHECKER_ADMIN_SECURITY_LEVEL"] = "Уровень безопасности административной группы не является повышенным";
+$MESS["SECURITY_SITE_CHECKER_ADMIN_SECURITY_LEVEL_DETAIL"] = "Пониженный уровень безопасности административной группы может значительно помочь злоумышленнику";
+$MESS["SECURITY_SITE_CHECKER_ADMIN_SECURITY_LEVEL_RECOMMENDATION"] = "Повысить";
+$MESS["SECURITY_SITE_CHECKER_ERROR_REPORTING"] = "Уровень вывода ошибок должен быть \"только ошибки\" или \"не выводить\"";
+$MESS["SECURITY_SITE_CHECKER_ERROR_REPORTING_DETAIL"] = "Отображение предупреждений php может позволить узнать полный физический путь к вашему проекту";
+$MESS["SECURITY_SITE_CHECKER_ERROR_REPORTING_RECOMMENDATION"] = "Изменить уровень вывода ошибок на \"не выводить\"";
+$MESS["SECURITY_SITE_CHECKER_DB_DEBUG"] = "Включена отладка SQL запросов (\$DBDebug в значении true)";
+$MESS["SECURITY_SITE_CHECKER_DB_DEBUG_DETAIL"] = "Отладка SQL запросов, может раскрыть чувствительную информацию о ресурсе";
+$MESS["SECURITY_SITE_CHECKER_DB_DEBUG_RECOMMENDATION"] = "Выключить";
+$MESS["SECURITY_SITE_CHECKER_DB_EMPTY_PASS"] = "Пароль к базе данных пустой";
+$MESS["SECURITY_SITE_CHECKER_DB_EMPTY_PASS_DETAIL"] = "Пустой пароль к БД может нести множество проблем";
+$MESS["SECURITY_SITE_CHECKER_DB_EMPTY_PASS_RECOMMENDATION"] = "Установить пароль";
+$MESS["SECURITY_SITE_CHECKER_DB_SAME_REGISTER_PASS"] = "Символы пароля к БД в одном регистре";
+$MESS["SECURITY_SITE_CHECKER_DB_SAME_REGISTER_PASS_DETAIL"] = "Пароль слишком слаб";
+$MESS["SECURITY_SITE_CHECKER_DB_SAME_REGISTER_PASS_RECOMMENDATION"] = "Использовать различный регистр символов в пароле";
+$MESS["SECURITY_SITE_CHECKER_DB_NO_DIT_PASS"] = "Пароль к БД не содержит чисел";
+$MESS["SECURITY_SITE_CHECKER_DB_NO_DIT_PASS_DETAIL"] = "Пароль слишком слаб";
+$MESS["SECURITY_SITE_CHECKER_DB_NO_DIT_PASS_RECOMMENDATION"] = "Добавить чисел в пароль";
+$MESS["SECURITY_SITE_CHECKER_DB_NO_SIGN_PASS"] = "Пароль к БД не содержит спецсимволов(знаков препинания)";
+$MESS["SECURITY_SITE_CHECKER_DB_NO_SIGN_PASS_DETAIL"] = "Пароль слишком слаб";
+$MESS["SECURITY_SITE_CHECKER_DB_NO_SIGN_PASS_RECOMMENDATION"] = "Добавить спецсимволов в пароль";
+$MESS["SECURITY_SITE_CHECKER_DB_MIN_LEN_PASS"] = "Длина пароля к БД меньше 8 символов";
+$MESS["SECURITY_SITE_CHECKER_DB_MIN_LEN_PASS_DETAIL"] = "Пароль слишком слаб";
+$MESS["SECURITY_SITE_CHECKER_DB_MIN_LEN_PASS_RECOMMENDATION"] = "Увеличить длину пароля";

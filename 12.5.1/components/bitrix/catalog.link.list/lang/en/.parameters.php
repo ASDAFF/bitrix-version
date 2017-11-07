@@ -1,0 +1,36 @@
+<?
+$MESS["IBLOCK_DETAIL_URL"] = "URL of the page with the detail contents";
+$MESS["IBLOCK_PRICES"] = "Prices";
+$MESS["IBLOCK_TYPE"] = "Infoblock type";
+$MESS["IBLOCK_IBLOCK"] = "Infoblock";
+$MESS["IBLOCK_PROPERTY"] = "Properties";
+$MESS["IBLOCK_SORT_SHOWS"] = "average shows";
+$MESS["IBLOCK_SORT_SORT"] = "sorting index";
+$MESS["IBLOCK_SORT_TIMESTAMP"] = "modification date";
+$MESS["IBLOCK_SORT_NAME"] = "name";
+$MESS["IBLOCK_SORT_ID"] = "ID";
+$MESS["IBLOCK_SORT_ACTIVE_FROM"] = "active from";
+$MESS["IBLOCK_SORT_ACTIVE_TO"] = "active to";
+$MESS["IBLOCK_SORT_ASC"] = "ascending";
+$MESS["IBLOCK_SORT_DESC"] = "descending";
+$MESS["IBLOCK_SECTION_URL"] = "URL of the page with the section contents";
+$MESS["IBLOCK_ELEMENT_SORT_FIELD"] = "Field to sort elements";
+$MESS["IBLOCK_ELEMENT_SORT_ORDER"] = "Sort order for elements";
+$MESS["IBLOCK_PRICE_CODE"] = "Price type";
+$MESS["IBLOCK_BASKET_URL"] = "URL of the page with the customer cart";
+$MESS["IBLOCK_FILTER_NAME_IN"] = "Name of the array with values used to filter elements";
+$MESS["IBLOCK_CACHE_FILTER"] = "Cache if the filter is active";
+$MESS["IBLOCK_PAGE_ELEMENT_COUNT"] = "Number of elements per page";
+$MESS["IBLOCK_ELEMENT_ID"] = "Element ID";
+$MESS["IBLOCK_LINK_PROPERTY_SID"] = "Property to store the link";
+$MESS["IBLOCK_ACTION_VARIABLE"] = "\"Actions\" parameter name";
+$MESS["IBLOCK_PRODUCT_ID_VARIABLE"] = "\"Product code\" parameter name";
+$MESS["IBLOCK_SECTION_ID_VARIABLE"] = "\"Section code\" parameter name";
+$MESS["IBLOCK_USE_PRICE_COUNT"] = "Show quantity range prices";
+$MESS["IBLOCK_SHOW_PRICE_COUNT"] = "Show price for quantity";
+$MESS["T_IBLOCK_DESC_PAGER_CATALOG"] = "Products";
+$MESS["IBLOCK_VAT_INCLUDE"] = "Include tax rate in price";
+$MESS["CP_BCLL_CACHE_GROUPS"] = "Respect Access Permissions";
+$MESS["CP_BCLL_CONVERT_CURRENCY"] = "Use only one currency to show prices";
+$MESS["CP_BCLL_CURRENCY_ID"] = "Convert all prices to currency";
+?>

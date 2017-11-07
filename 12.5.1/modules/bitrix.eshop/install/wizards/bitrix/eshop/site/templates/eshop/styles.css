@@ -1,0 +1,12 @@
+html,body,div,h1,h2,h3,h4,h5,h6,p,img,ul,li,table{margin:0;padding:0;border:0;outline:0 !important;font-size:100%;vertical-align:baseline;background:transparent}
+ol,ul{list-style:none}:focus{outline:none !important}
+table{border-collapse:collapse;border-spacing:0}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;background:url("images/bg.png")}
+a{color:#007acf;cursor: pointer}a:hover{color:#e83434}
+a img{border:none}
+p{
+    font-size:13px;
+    color:#3F3F3F;
+    padding:5px 0 20px;
+    line-height:20px
+}

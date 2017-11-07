@@ -1,0 +1,32 @@
+.clouds-directory-icon
+{
+	padding-left: 25px;
+	display: inline-block;
+	position: relative;
+}
+.clouds-directory-icon:before
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: '';
+	width: 21px;
+	height: 15px;
+	background: url("/bitrix/panel/main/images/icons-sprite-2.png") no-repeat 0 -118px;
+}
+.clouds-up-icon
+{
+	padding-left: 25px;
+	display: inline-block;
+	position: relative;
+}
+.clouds-up-icon:before
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: '';
+	width: 21px;
+	height: 15px;
+	background: url("/bitrix/panel/main/images/icons-sprite-2.png") no-repeat 0 -1574px;
+}

@@ -1,0 +1,2 @@
+DROP TABLE if exists b_socialservices_user;
+DROP TABLE if exists b_socialservices_message;

@@ -1,0 +1,14 @@
+.bx-modal-container.bx-yellow .btn-buy,
+.bx-modal-container.bx-yellow .btn-add {
+	color: #FFF;
+	text-decoration: none;
+	background-color: #F9A91D;
+	border-color: #F9A91D;
+}
+.bx-modal-container.bx-yellow .btn-buy:hover,
+.bx-modal-container.bx-yellow .btn-add:hover{
+	color: #FFF;
+	text-decoration: none;
+	background-color: #FABA4A;
+	border-color: #FABA4A;
+}

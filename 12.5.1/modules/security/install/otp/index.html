@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html manifest="/bitrix/otp/manifest.php">
+<head>
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+<link rel="apple-touch-icon" sizes="114x114" href="icon.png"/>
+<link rel="apple-touch-icon" sizes="72x72" href="icon.png"/>
+
+<link rel="apple-touch-icon-precomposed" href="icon.png"/>
+<link rel="apple-touch-startup-image" href="startup.png">
+
+<link rel="stylesheet" href="jquery.mobile-1.0a3.min.css" /> 
+<link rel="stylesheet" href="otp.css" /> 
+<script type="text/javascript" src="jquery-1.5.min.js"></script>
+<script type="text/javascript" src="lang.js"></script>
+<script type="text/javascript" src="otp.js"></script>
+<script type="text/javascript" src="jquery.mobile-1.0a3.min.js"></script> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bitrix OTP</title>
+</head>
+
+<body>
+
+<script>
+window.addEventListener('load', function(e) 
+{
+	window.applicationCache.addEventListener('updateready', function(e) 
+	{
+		if (window.applicationCache.status == window.applicationCache.UPDATEREADY) 
+		{
+			window.applicationCache.swapCache();
+			if (confirm(GetMessage('confupdate'))) 
+			{
+				window.location.reload();
+			}
+		} 
+	}, false);
+}, false);
+
+function isOnline()
+{
+	if(navigator.userAgent.indexOf('iPhone')!=-1 || navigator.userAgent.indexOf('iPad')!=-1 ||  navigator.userAgent.indexOf('Android')!=-1)
+		return navigator.onLine;
+	return true;	
+}
+
+function errorHandler(transaction, error) 
+{
+	alert(GetMessage('alertsave')+' '+error.message+' (Code '+error.code+')');
+	return true;
+}
+
+function goTo(id, page)
+{
+	sessionStorage.curSiteID = id;
+	$.mobile.changePage(page);
+}
+
+var protocol = 'https://';
+function sslAjaxCall(url, data, success, error)
+{
+	protocol = 'https://';
+	$.ajax({
+		'url': 'https://' + url,
+		'type': 'POST',
+		'timeout': 5000, 
+		'data': data,
+		'success': success,
+		'error': function(e) 
+		{
+			if(e.status>=400)
+				error(e);
+			else
+			{
+				protocol = 'http://';
+				$.ajax({
+					'url': 'http://' + url,
+					'type': 'POST',
+					'timeout': 10000, 
+					'data': data,
+					'success': success,
+					'error': error
+				});
+			}
+		}
+	});
+}
+
+/////
+function getSiteRows(id, F)
+{
+	db.transaction(
+		function(transaction) 
+		{
+			transaction.executeSql(
+				'SELECT * FROM sites WHERE id=?;', [id],
+				function (transaction, result) 
+				{
+					if(result.rows.length!=1)
+						F(false);
+					else
+						F(result.rows.item(0));
+				},
+				errorHandler
+			);
+		}
+	);
+}
+
+function getNextOtp()
+{
+	getSiteRows(sessionStorage.curSiteID, function (siteRows)
+		{
+			var str = '';
+			str = ''+HOTP(siteRows.position+1, siteRows.secret);
+			db.transaction(
+				function(transaction) 
+				{
+					transaction.executeSql(
+						'UPDATE sites SET position=? WHERE id=?', [siteRows.position+1, siteRows.id],
+						function (transaction, result) 
+						{
+						},
+						errorHandler
+					);
+				}
+			);
+
+			$('#passwordfield').slideDown('fast');
+			$('#otppassword').html(str);
+			setTimeout(function ()
+			{
+				$('#getOtpLink').hide();
+				$('#getOtpLink2').show();
+			}, 500);
+			//$('#get_content').page();
+		}
+	);
+}
+
+function deleteSite()
+{
+	getSiteRows(sessionStorage.curSiteID, function (siteRows)
+		{
+			if(!siteRows)
+				$.mobile.changePage('#home');
+			else
+			{
+				if($('#unreg').attr('value') != "on")
+					deleteSiteRow();
+				else
+				{
+					var login = $("#delete").find("#login").attr('value');
+					var password = $("#delete").find("#password").attr('value');
+					if(login.length<=0 || password.length<=0)
+						alert(GetMessage('alertlogin'));
+					else
+					{
+						var str = HOTP(siteRows.position+1, siteRows.secret);
+						db.transaction(
+							function(transaction) 
+							{
+								transaction.executeSql(
+									'UPDATE sites SET position=? WHERE id=?', [siteRows.position+1, siteRows.id],
+									function (transaction, result) 
+									{
+									},
+									errorHandler
+								);
+							}
+						);
+
+						password += str;
+						var data = {'action': 'unregister', 'login': login, 'password': password, 'secret': siteRows.secret};
+						if($('#delcaptchablock').css('display') != 'none')
+						{
+							data['delcaptcha_sid'] = $("#delcaptcha_sid").attr('value');
+							data['delcaptcha_word'] = captcha;
+						}
+
+						sslAjaxCall(
+							siteRows.url + '/bitrix/otp/ws/index.php', 
+							data, 
+							deleteSiteRow, 
+							function(e) 
+							{
+								$.mobile.pageLoading(true);
+								
+								if(e.status==401)
+								{
+									if(confirm(GetMessage('confdelete1')))
+										deleteSiteRow();
+
+									var ob = false;
+									try{
+										eval('ob = ' + e.responseText);
+									}catch(e){}
+									if(ob && ob.captchaCode)
+									{
+										$('#delcaptchablock').show();
+										$('#delcaptcha_sid').attr('value', ob.captchaCode);
+										$('#delcaptcha_word').attr('value', '');
+										$('#delcaptcha_img').attr('src', protocol + site + '/bitrix/tools/captcha.php?captcha_sid='+ob.captchaCode);
+									}
+								}
+								else
+									if(confirm(GetMessage('confdelete2')+' ('+e.status+').' + GetMessage('confdelete3')))
+										deleteSiteRow();
+							}
+						);
+					}
+				}
+			}
+		}
+	);
+}
+
+function deleteSiteRow()
+{
+	db.transaction(
+		function(transaction) 
+		{
+			transaction.executeSql(
+				'DELETE FROM sites WHERE id=?;', [sessionStorage.curSiteID],
+				function (transaction, result) 
+				{
+				},
+				errorHandler
+			);
+		}
+	);
+
+	$.mobile.changePage('#home');
+}
+
+
+function saveSite()
+{
+	var name = $("#edit").find("#name").attr('value');
+	var site = $("#edit").find("#site").attr('value');
+	var secret = $("#edit").find("#secret").attr('value');
+	if(name.length<=0)
+		alert(GetMessage('alertdesc'));
+	else if(site.length<=0)
+		alert(GetMessage('alerturl'));
+	else if(secret.length<=0)
+		alert(GetMessage('alertsecret'));
+	else
+	{
+		db.transaction(
+			function(transaction) {
+				transaction.executeSql(
+					'UPDATE sites SET url=?, name=?, secret=? WHERE id=?;',
+					[site, name, secret, sessionStorage.curSiteID],
+					function(){
+						$.mobile.changePage('#home');
+					},
+				   	errorHandler
+				);
+			}
+		);
+	}
+}
+
+function onClickAddSite()
+{
+	if(!isOnline())
+	{
+		alert(GetMessage('alertinet'));
+		return false;
+	}
+
+	$.mobile.changePage("#add");
+}
+
+function onClickAddNew()
+{
+	var name = $("#add").find("#name").attr('value');
+	var site = $("#add").find("#site").attr('value');
+
+	if(site.indexOf("://")>-1)
+		site = site.substring(site.indexOf("://")+3);
+
+	if(site.indexOf("/")>-1)
+		site = site.substring(0, site.indexOf("/"));
+
+	var login = $("#add").find("#login").attr('value');
+	var password = $("#add").find("#password").attr('value');
+	var captcha = $("#add").find("#captcha_word").attr('value');
+
+	if(site.length<=0)
+		alert(GetMessage('alerturl'));
+	else if(name.length<=0)
+		alert(GetMessage('alertdesc'));
+	else if(login.length<=0 || password.length<=0)
+		alert(GetMessage('alertpass'));
+	else
+	{
+		$.mobile.pageLoading();
+		var secret = GenNewSecret();
+		function fsucc(html)
+		{
+			// проверить ответ
+
+			db.transaction(
+				function(transaction) {
+					transaction.executeSql(
+						'INSERT INTO sites (url, name, secret, position) VALUES (?, ?, ?, ?);',
+						[site, name, secret, 0],
+						function(){
+							$.mobile.changePage('#home');
+						},
+						errorHandler
+					);
+				}
+			);
+
+			$.mobile.pageLoading(true);
+		};
+		var data = {'action': 'register', 'login': login, 'password': password, 'secret': secret};
+		if($('#captchablock').css('display') != 'none')
+		{
+			data['captcha_sid'] = $("#add").find("#captcha_sid").attr('value');
+			data['captcha_word'] = captcha;
+		}
+		sslAjaxCall(
+			site + '/bitrix/otp/ws/index.php',
+			data,
+			fsucc,
+			function(e) 
+			{
+				if(e.status==401)
+				{
+					alert(GetMessage('alertablogin'));
+					var ob = false;
+					
+					try{
+						eval('ob = ' + e.responseText);
+					}catch(e){}
+					if(ob && ob.captchaCode)
+					{
+						$('#captchablock').show();
+						$('#captcha_sid').attr('value', ob.captchaCode);
+						$('#captcha_word').attr('value', '');
+						$('#captcha_img').attr('src', protocol + site + '/bitrix/tools/captcha.php?captcha_sid='+ob.captchaCode);
+					}
+				}
+				else
+					if(confirm(GetMessage('alertregerr1')+' ('+e.status+'). '+GetMessage('alertregerr2')))
+						fsucc();
+
+				$.mobile.pageLoading(true);
+			}
+		);
+	}
+}
+
+////
+var firstTime = true;
+function onHomePageShow()
+{
+	if((navigator.userAgent.indexOf('iPhone')!=-1 || navigator.userAgent.indexOf('iPad')!=-1) && !window.navigator.standalone)
+	{
+		if(navigator.userAgent.indexOf('iPhone')!=-1)
+			$('#home_content').css('background', 'url(images/arrow.png) no-repeat bottom center').css('min-height', '400px');
+		$('#addbtn').hide();
+		var v = navigator.appVersion.match(/OS \d+_\d+/g);
+		v = v ? v[0].replace(/[^\d_]/g, "").replace("_", ".") * 1 : 0,
+		$('#home_content').html(GetMessage('inst').replace('#icon#', '<img height="20" src="images/iphone'+(v>=4.2?'4':'3')+'.png">'));
+		return;
+	}
+
+	db.transaction(
+		function(transaction) 
+		{
+			transaction.executeSql(
+				'SELECT * FROM sites ORDER BY id;', [],
+				function (transaction, result) 
+				{
+					var str = '';
+					if(firstTime)
+					{
+						firstTime = false;
+						if(result.rows.length == 1)
+						{
+							 goTo(result.rows.item(0).id, "#get");
+						}
+					}
+					if(result.rows.length>0)
+					{
+						str = '<ul data-role="listview" id="listsites">';
+						for (var i=0; i < result.rows.length; i++) 
+						{
+							var row = result.rows.item(i);
+							str += '<li><a onclick="goTo('+row.id+', \'#get\')"><h3>'+row.name+'</h3></a></li>';
+						}
+						str += '</ul>';
+					}
+					else
+					{
+						str = GetMessage('addnew');
+					}
+					$('#home_content').empty();
+					$(str).appendTo($('#home_content'));
+					$('#listsites').page();
+				},
+				errorHandler
+			);
+		}
+	);
+}
+
+$('#home').live('pagebeforeshow', onHomePageShow);
+
+
+function onGetPageShow()
+{
+	getSiteRows(sessionStorage.curSiteID, function (siteRows)
+		{
+			if(siteRows)
+				$('#gettitle').html(siteRows.name);
+			else
+				$.mobile.changePage('#home');
+		}		
+	);
+}
+
+$('#get').live('pagebeforeshow', onGetPageShow);
+
+
+function onAddPage()
+{
+	$("#add_content").find("#name").attr('value', '');
+	$("#add_content").find("#site").attr('value', '');
+	$("#add_content").find("#login").attr('value', '');
+	$("#add_content").find("#password").attr('value', '');
+	$('#captcha_word').attr('value', '');
+	$('#captchablock').hide();
+}
+
+$('#add').live('pagebeforeshow', onAddPage);
+
+
+function onDeletePage()
+{
+	$('#delcaptcha_word').attr('value', '');
+	$('#delcaptchablock').hide();
+	$("#delete_content").find("#login").attr('value', '');
+	$("#delete_content").find("#password").attr('value', '');
+}
+
+$('#delete').live('pagebeforeshow', onDeletePage);
+
+function onEditPage()
+{
+	getSiteRows(sessionStorage.curSiteID, function (siteRows)
+		{
+			if(siteRows)
+			{
+				$("#edit_content").find("#name").attr('value', siteRows.name);
+				$("#edit_content").find("#site").attr('value', siteRows.url);
+				$("#edit_content").find("#secret").attr('value', siteRows.secret);
+			}
+			else
+				$.mobile.changePage('#home');
+		}
+	);
+}
+
+$('#edit').live('pagebeforeshow', onEditPage);
+</script>
+
+<div data-role="page" id="home" data-theme="b">
+	<div data-role="header" data-nobackbtn="true">
+		<a href="#add" data-icon="plus" data-transition="pop" style="display:none"></a>
+		<h1 data-lang="title">Bitrix OTP</h1>
+		<a onclick="onClickAddSite()" data-icon="plus" id="addbtn" data-transition="pop" class="ui-btn-right" data-lang="add">Добавить</a>
+	</div>
+	
+	<div data-role="content" id="home_content">
+	
+		<div style="width:100%;min-height:200px;text-align: center; padding-top: 120px; ">
+			<span style="background: url(./images/loading.gif) no-repeat top left; padding-left: 21px; height: 18px;" data-lang="wait">Пожалуйста, подождите....</span>
+		</div>
+	</div>
+</div>
+
+
+<div data-role="page" id="get" data-theme="b">
+	<div data-role="header">
+		<a href="#home" data-direction="reverse" data-lang="sitebut">Сайты</a>
+		<h1 id="gettitle" data-lang="pwdtitle">Пароль</h1>
+		<a href="#edit" data-transition="pop" class="ui-btn-right" data-lang="edit">Изменить</a>
+	</div>
+	
+	<div data-role="content" id="get_content">
+		<div id="passwordfield" style="display: none;">
+			<span data-lang="yourpwd">Ваш одноразовый пароль для сайта:</span>
+			<div id="otppassword"></div> 
+		</div>
+		<a onclick="getNextOtp();" id="getOtpLink" data-transition="pop" data-role="button" data-lang="getpwd">Получить пароль</a> 
+		<a onclick="getNextOtp();" id="getOtpLink2" data-transition="pop" data-role="button" style="display:none" data-lang="getpwd2">Получить другой пароль</a> 
+		<br>
+		<span data-lang="notespwd">Одноразовый пароль (см. 2 на рисунке) вводится в поле "Пароль" стандартной формы авторизации на сайте сразу после обычного пароля (см. 1 на рисунке) без пробелов:<br><br><img src="./images/ru_pass_form.jpg"><span>
+	</div>
+</div>
+
+
+<div data-role="page" id="add" data-theme="b">
+	<div data-role="header" data-nobackbtn="true">
+		<a href="#home" data-direction="reverse" data-lang="cancel">Отменить</a>
+		<h1 data-lang="newtitle">Новый сайт</h1>
+		<a onclick="onClickAddNew()" data-icon="arrow-r" class="ui-btn-right" data-lang="next">Далее</a>
+	</div>
+	
+	<div data-role="content" id="add_content">
+		<div data-role="fieldcontain">
+			<label for="site" data-lang="url">Адрес сайта:</label>
+			<input type="text" name="site" autocapitalize="off" autocorrect="off" id="site" onchange="if($('#add').find('#name').attr('value').length<=0)$('#add').find('#name').attr('value', this.value)" placeholder="www.yoursite.com" value=""  />
+			<label for="name" data-lang="descr">Описание:</label>
+			<input type="text" name="name" id="name" data-lang="req" data-lang-attr="placeholder" placeholder="Обязательно" value=""  />
+			<label for="login" data-lang="login">Имя входа на сайт:</label>
+			<input type="text" autocapitalize="off" autocorrect="off" name="login" id="login" data-lang="req" data-lang-attr="placeholder" placeholder="Обязательно" value=""  />
+			<label for="password" data-lang="password">Пароль:</label>
+			<input type="password" name="password" id="password" value=""  />
+			<div id="captchablock" style="display: none">
+				<label for="captcha_word" data-lang="captcha">Защита:</label>
+				<img id="captcha_img" width="180" height="40" alt="CAPTCHA" />
+				<input type="hidden" id="captcha_sid" value=""/>
+				<input type="text" autocapitalize="off" autocorrect="off" name="captcha_word"  data-lang="capt" data-lang-attr="placeholder" id="captcha_word" maxlength="50" value="" placeholder="Введите текст на картинке"/>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+<div data-role="page" data-theme="b" id="edit">
+	<div data-role="header" data-nobackbtn="true">
+		<a href="#home" data-direction="reverse" data-lang="cancel">Отменить</a>
+		<h1 data-lang="edittitle">Редактирование</h1>
+		<a onclick="saveSite()" class="ui-btn-right" data-lang="save">Сохранить</a>
+	</div>
+	
+	<div data-role="content" id="edit_content">
+		<div data-role="fieldcontain">
+			<label for="name" data-lang="url">Адрес сайта:</label>
+			<input type="text" autocapitalize="off" autocorrect="off" name="site" id="site" data-lang="req" data-lang-attr="placeholder" value="" placeholder="Обязательно" />
+			<label for="name" data-lang="descr">Описание:</label>
+			<input type="text" name="name" id="name" data-lang="req" data-lang-attr="placeholder" value="" placeholder="Обязательно" />
+			<label for="name" data-lang="secret">Секретный ключ:</label>
+			<input type="text" name="secret" autocapitalize="off" autocorrect="off" id="secret" value=""  />
+		</div>
+
+		<div data-role="fieldcontain"><br><br><br>
+			<a href="#delete" data-transition="pop" data-role="button" data-theme="r" data-lang="delete">Удалить</a> 
+		</div>
+	</div>
+
+</div>
+
+
+<div data-role="page" data-theme="b" id="delete">
+	<div data-role="header" data-nobackbtn="true">
+		<a href="#home" data-direction="reverse" data-lang="cancel">Отменить</a>
+		<h1 data-lang="deltitle">Удаление</h1>
+		<a onclick="deleteSite()" data-icon="delete" class="ui-btn-right" data-lang="delete">Удалить</a>
+	</div>
+	
+	<div data-role="content" id="delete_content">
+		<div data-lang="delwarn">Внимание! Вся информация связанная с авторизацией на сайте будет удалена. Для корректного удаления необходимо разрегистрировать устройство на сайте.</div>
+		<div data-role="fieldcontain">
+			<label for="slider" data-lang="unreg">Разрегистрировать устройство:</label>
+			<select name="unreg" id="unreg" data-role="slider" onchange="if(this.value=='on')$('#unregparams').slideDown('fast'); else $('#unregparams').slideUp('fast');">
+				<option value="off" data-lang="no">Нет</option>
+				<option value="on" selected="selected" data-lang="yes">Да</option>
+			</select> 
+		</div>
+		<div data-role="fieldcontain" id="unregparams">
+			<label for="name" data-lang="login">Имя входа на сайт:</label>
+			<input type="text" autocapitalize="off" autocorrect="off" name="login" id="login" data-lang="req" data-lang-attr="placeholder" placeholder="Обязательно" value=""  /><br>
+			<label for="name" data-lang="password2">Пароль (без одноразового пароля OTP):</label>
+			<input type="password" name="password" id="password" value=""  />
+			<div id="delcaptchablock" style="display: none">
+				<label for="delcaptcha_word" data-lang="captcha">Защита:</label>
+				<img id="delcaptcha_img" width="180" height="40" alt="CAPTCHA" />
+				<input type="hidden" id="delcaptcha_sid" value=""/>
+				<input type="text" name="delcaptcha_word" autocapitalize="off" autocorrect="off" id="delcaptcha_word" maxlength="50" value="" data-lang="entcapt"  data-lang-attr="placeholder" placeholder="Введите текст на картинке"/>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>

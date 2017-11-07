@@ -1,0 +1,19 @@
+/* Filter popups */
+td.filter-more{	
+	width:14px;}
+td.filter-more span, span.filter-hide {
+	cursor: pointer;
+	cursor: hand;
+	background-repeat:no-repeat;
+	background-position:left;
+	width:14px;
+	height:14px;
+	border:none;
+	padding:0px;
+	display:block;
+	background-image:url(images/more.gif);
+	margin: 0px;}
+span.filter-hide {
+	background-image:url(images/less.gif);
+	float:right;
+	margin:0px 0px 0px 10px;}

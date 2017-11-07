@@ -1,0 +1,21 @@
+<?
+$MESS ['STAT_M_01'] = "ßíâ";
+$MESS ['STAT_M_02'] = "Ôåâ";
+$MESS ['STAT_M_03'] = "Ìàðò";
+$MESS ['STAT_M_04'] = "Àïð";
+$MESS ['STAT_M_05'] = "Ìàé";
+$MESS ['STAT_M_06'] = "Èþíü";
+$MESS ['STAT_M_07'] = "Èþëü";
+$MESS ['STAT_M_08'] = "Àâã";
+$MESS ['STAT_M_09'] = "Ñåí";
+$MESS ['STAT_M_10'] = "Îêò";
+$MESS ['STAT_M_11'] = "Íîÿ";
+$MESS ['STAT_M_12'] = "Äåê";
+$MESS ['STAT_WEEKDAY_0'] = "Âñ";
+$MESS ['STAT_WEEKDAY_1'] = "Ïí";
+$MESS ['STAT_WEEKDAY_2'] = "Âò";
+$MESS ['STAT_WEEKDAY_3'] = "Ñð";
+$MESS ['STAT_WEEKDAY_4'] = "×ò";
+$MESS ['STAT_WEEKDAY_5'] = "Ïò";
+$MESS ['STAT_WEEKDAY_6'] = "Ñá";
+?>

@@ -1,0 +1,59 @@
+body { background: #cccccc;}
+
+#otppassword {font-size: 35px; text-align: center; padding: 10px;}
+
+input {text-shadow: none !important;}
+
+.ui-btn-up-r 
+{
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid       #220000;
+    background:             #AA0000;
+    font-weight: bold;
+    color:                  #FFFFFF;
+    text-shadow: 0 -1px 1px #220000;
+    background-image: -moz-linear-gradient(top, 
+                            #550000, 
+                            #AA0000);
+    background-image: -webkit-gradient(linear,left top,left bottom,
+            color-stop(0,   #550000),
+            color-stop(1,   #AA0000));
+}
+
+.ui-btn-hover-r 
+{
+    text-decoration: none;
+    border: 1px solid       #220000;
+    background:             #550000;
+    font-weight: bold;
+    color:                  #FFFFFF;
+    text-shadow: 0 -1px 1px #220000;
+    background-image: -moz-linear-gradient(top, 
+                            #550000, 
+                            #AA0000);
+    background-image: -webkit-gradient(linear,left top,left bottom,
+            color-stop(0,   #770000),
+            color-stop(1,   #CC0000));
+}
+
+.ui-btn-down-r 
+{
+    text-decoration: none;
+    border: 1px solid       #220000;
+    background:             #AA0000;
+    font-weight: bold;
+    color:                  #FFFFFF;
+    text-shadow: 0 -1px 1px #220000;
+    background-image: -moz-linear-gradient(top, 
+                            #330000, 
+                            #770000);
+    background-image: -webkit-gradient(linear,left top,left bottom,
+            color-stop(0,   #330000),
+            color-stop(1,   #770000));
+}
+
+.ui-btn-down-r a.ui-link-inherit 
+{
+    color:                  #fff;
+}
