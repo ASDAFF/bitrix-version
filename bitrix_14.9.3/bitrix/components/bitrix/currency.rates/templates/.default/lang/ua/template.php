@@ -1,0 +1,4 @@
+<?
+$MESS["CURRENCY_CBRF"] = "Êóðñ ÖÁ ÐÔ";
+$MESS["CURRENCY_SITE"] = "Êóðñ íà ñàéò³";
+?>

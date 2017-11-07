@@ -1,0 +1,107 @@
+.header_wrap{background:#b8cad6}
+.header_inner{box-shadow: 0 1px 1px 1px #abbbc7}
+.header_inner_bottom_line_container{
+	background: #85a5bb;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg1YTViYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzODQ4NTkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #85a5bb 0%, #384859 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#85a5bb), color-stop(100%,#384859));
+	background: -webkit-linear-gradient(top, #85a5bb 0%,#384859 100%);
+	background: -o-linear-gradient(top, #85a5bb 0%,#384859 100%);
+	background: -ms-linear-gradient(top, #85a5bb 0%,#384859 100%);
+	background: linear-gradient(to bottom, #85a5bb 0%,#384859 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#85a5bb', endColorstr='#384859',GradientType=0 );
+}
+.header_inner_bottom_line{
+	background: #64798f;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY0Nzk4ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1MjY0NzYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #64798f 0%, #526476 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#64798f), color-stop(100%,#526476));
+	background: -webkit-linear-gradient(top, #64798f 0%,#526476 100%);
+	background: -o-linear-gradient(top, #64798f 0%,#526476 100%);
+	background: -ms-linear-gradient(top, #64798f 0%,#526476 100%);
+	background: linear-gradient(to bottom, #64798f 0%,#526476 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64798f', endColorstr='#526476',GradientType=0 );
+}
+
+/* ---- INC ABOUT FOOTER ---- */
+.bx_inc_about_footer p{color: #4c4a3f}
+.bx_inc_about_footer a{color: #0073a3}
+
+/* FOOTER WRAP */
+.bottom_wrap{
+	background:url(images/lightblue_bg.png);
+	box-shadow:inset 0 -3px 6px rgba(0,0,0,.25), inset 0 12px 11px -10px rgba(0,0,0,.2);
+}
+
+
+/* components top_nav */
+.footer_wrap{background:url(images/foooter_bg.png)}
+.footer_contact{
+	color: #fff;
+	text-shadow:0 -1px 0 rgba(0,0,0,.3);
+}
+
+.bx_title_section.stars .icon{background:url(images/stars.png) no-repeat center left}
+.bx_title_section.time  .icon{background:url(images/time.png)  no-repeat center left}
+
+.bx_topnav{
+	margin: 0;
+	padding: 16px 0 5px;
+}
+.bx_topnav li{
+	display: inline-block;
+	margin-right: 2%;
+}
+.bx_topnav li a{
+	color:#000;
+	text-shadow:0 1px 1px rgba(255,255,255,.5);
+	text-decoration: none;
+	font-size: 14px;
+}
+.bx_topnav li a:hover{text-decoration: underline;}
+.bx_topnav li a:active{color: #5b4f3c;}
+
+.bx_topnav,
+.bx_topnav *{
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+
+
+
+/* component inc_catalog_footer */
+.bx_inc_catalog_footer{
+	color: #fff;
+	text-shadow:0 1px 2px #17326e;
+}
+.bx_inc_catalog_footer h3{
+	background: url(images/footer_h4_bg.png) repeat-x bottom;
+}
+.bx-touch .bx_inc_catalog_footer h3{
+	background: url(images/x2footer_h4_bg.png) repeat-x bottom;
+}
+.bx_inc_catalog_footer ul li a{
+	color: #fff;
+	text-shadow:0 1px 2px #17326e;
+}
+
+
+/* component inc_menu_footer */
+.bx_inc_menu_footer{
+	color: #fff;
+	text-shadow:0 1px 2px #17326e;
+}
+.bx_inc_menu_footer h3{
+	background: url(images/footer_h4_bg.png) repeat-x bottom;
+}
+.bx-touch .bx_inc_menu_footer h3{
+	background: url(images/x2footer_h4_bg.png) repeat-x bottom;
+}
+.bx_inc_menu_footer ul li a{
+	color: #fff;
+	text-shadow:0 1px 2px #17326e;
+}

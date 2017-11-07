@@ -1,0 +1,6 @@
+2014-10-26 12:47:13 -  - exec CUpdateClientPartner::GetUpdatesList
+2014-10-26 12:47:13 -  - exec CUpdateClientPartner::__CollectRequestData
+2014-10-26 12:47:13 -  - utf=N&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=soroknog.ru&LICENSE_KEY=X&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&TYPENC=D&CLIENT_PHPVER=5.4.30-1&dbv=5.5.35&instm=main%2C14.5.0%2CY%3Bbitrix.eshop%2C14.5.0%2CN%3Bbitrix.sitecorporate%2C14.5.0%2CN%3Bbitrixcloud%2C14.0.4%2CN%3Bblog%2C14.5.0%2CN%3Bcatalog%2C14.5.3%2CN%3Bclouds%2C14.5.0%2CN%3Bcompression%2C14.0.0%2CN%3Bcurrency%2C14.0.0%2CN%3Beshopapp%2C14.0.0%2CN%3Bfileman%2C14.5.0%2CN%3Bform%2C14.0.1%2CN%3Bforum%2C14.5.1%2CN%3Bhighloadblock%2C14.0.6%2CN%3Biblock%2C14.5.0%2CN%3Bmobileapp%2C14.0.3%2CN%3Bperfmon%2C14.0.1%2CN%3Bphotogallery%2C14.5.1%2CN%3Bpull%2C14.1.6%2CN%3Breport%2C14.1.1%2CN%3Bsale%2C14.5.2%2CN%3Bscale%2C14.5.0%2CN%3Bsearch%2C14.5.0%2CN%3Bsecurity%2C14.5.0%2CN%3Bseo%2C14.5.0%2CN%3Bsocialservices%2C14.0.4%2CN%3Bsubscribe%2C14.5.0%2CN%3Bvote%2C14.0.2%2CN&reqm=bitrix.eshop%2Cbitrix.sitecorporate
+2014-10-26 12:47:13 -  - exec CUpdateClientPartner::GetHTTPPage
+2014-10-26 12:47:14 -  - TIME GetUpdatesList(request) 0.275 sec
+2014-10-26 12:47:14 -  - exec CUpdateClientPartner::ParseServerData

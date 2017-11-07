@@ -1,0 +1,97 @@
+body{font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;}
+.bx_unsubscribe{
+	padding: 20px;
+}
+.bx_unsubscribe_title{
+	margin: 0;
+	height: 56px;
+	line-height: 56px;
+	padding: 0;
+	font-size: 25px;
+	color: #000;
+	vertical-align: middle;
+}
+.bx_unsubscribe_sep{
+	margin-top: 10px;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #e5e5e5;
+}
+.bx_unsubscribe_text_black{
+	font-size: 13px;
+	color: #000;
+	margin: 0;
+	padding: 0 0 20px 0;
+}
+.bx_unsubscribe_text_gray{
+	font-size: 13px;
+	color: #a0a0a0;
+	margin: 0;
+	padding: 10px 0 0 0;
+}
+.bx_unsubscribe_list{
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+.bx_unsubscribe_temp{
+	position: relative;
+	padding-left:45px;
+	margin-top: 10px;
+}
+
+.bx_unsubscribe_input{
+	position: absolute;
+	left: 20px;
+	top: 0;
+}
+.bx_unsubscribe_label{
+	display: block;
+	font-size: 13px;
+	color: #000;
+	padding-bottom: 6px;
+	padding-top: 2px;
+}
+.bx_unsubscribe_prop{
+	color: #a0a0a0;
+	font-size: 12px;
+	margin-left: 0;
+	padding-left: 45px;
+	display: block;
+	margin-bottom: 20px;
+}
+.bx_unsubscribe_btn_container{
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.bx_unsubscribe_btn{
+	color: #fff;
+	font-weight: bold;
+	font-size: 17px;
+	border-top:   1px solid #ff5b00;
+	border-left:  1px solid #ee5804;
+	border-right: 1px solid #ee5804;
+	border-bottom:1px solid #e35607;
+	background-image: -webkit-linear-gradient(#ff7000 0%, #ff4600 100%);
+	background-image: -o-linear-gradient(#ff7000 0%, #ff4600 100%);
+	background-image: linear-gradient(#ff7000 0%, #ff4600 100%);
+	text-shadow:1px 1px 1px #d84a00;
+	border-radius:2px ;
+	padding: 9px 15px;
+	cursor: pointer;
+	outline: none;
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2), inset 0 1px 0 0 #ff9300
+}
+.bx_unsubscribe_btn:hover{
+	background-image: -webkit-linear-gradient(#ff9300 0%, #ff5500 100%);
+	background-image: -o-linear-gradient(#ff9300 0%, #ff5500 100%);
+	background-image: linear-gradient(#ff9300 0%, #ff5500 100%);
+}
+.bx_unsubscribe_btn:active{
+	background-image: -webkit-linear-gradient(#ff5b00 0%, #ff4b00 100%);
+	background-image: -o-linear-gradient(#ff5b00 0%, #ff4b00 100%);
+	background-image: linear-gradient(#ff5b00 0%, #ff4b00 100%);
+	box-shadow: inset -1px 0 2px 0 rgba(0,0,0,.3);
+	position: relative;
+	bottom: -1px;
+}

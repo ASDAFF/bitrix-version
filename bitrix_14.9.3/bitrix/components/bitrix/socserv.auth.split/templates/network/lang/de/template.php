@@ -1,0 +1,4 @@
+<?
+$MESS["SAL_N_NOTE"] = "Um die E-Mail und das Passwort zu ändern, mit denen Sie sich in Ihrem Bitrix24 einloggen oder um Accounts in den sozialen Netzwerken zu Ihrem Profil hinzuzufügen, öffnen Sie Bitrix24.Identifizierungsseite und nehmen Sie dort notwendige Änderungen vor.  <br><br>Bitrix24.Indentifizierungsseite ist eine persönliche Seite, die ausschließlich für Sie verfügbar ist. Wenn Sie die Autorisierungsdaten auf dieser Seite ändern, ändern Sie diese auch für alle Bitrix24-Intranets, wo Sie registriert sind, und auch für Ihren Bitrix24.Network-Account. ";
+$MESS["SAL_N_PASSPORT"] = "Meine Bitrix24.Indentifizierungsseite bearbeiten";
+?>

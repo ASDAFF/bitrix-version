@@ -1,0 +1,4 @@
+<?
+$MESS["REPORT_REPORT"] = "Çâ³ò";
+$MESS["REPORT_TOTAL"] = "Âñüîãî";
+?>

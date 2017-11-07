@@ -1,0 +1,12 @@
+<?
+/* make trans_check.pl happy
+GetMessage('TASK_NAME_CLOUDS_DENIED');
+GetMessage('TASK_NAME_CLOUDS_BROWSE');
+GetMessage('TASK_NAME_CLOUDS_UPLOAD');
+GetMessage('TASK_NAME_CLOUDS_FULL_ACCESS');
+GetMessage('TASK_DESC_CLOUDS_DENIED');
+GetMessage('TASK_DESC_CLOUDS_BROWSE');
+GetMessage('TASK_DESC_CLOUDS_UPLOAD');
+GetMessage('TASK_DESC_CLOUDS_FULL_ACCESS');
+*/
+?>

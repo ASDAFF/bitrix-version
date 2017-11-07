@@ -1,0 +1,4 @@
+<?
+$MESS["CATALOG_SB_TW_MAKE"] = "Òâ³ò";
+$MESS["CATALOG_SB_VK_SAVE"] = "Ëàéê";
+?>

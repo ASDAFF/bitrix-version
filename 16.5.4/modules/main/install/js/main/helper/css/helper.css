@@ -1,0 +1,314 @@
+.bx-help-curtain {
+	background-color: #000;
+	background-color: rgba(0,0,0, 0.65);
+	bottom: 0;
+	display: none;
+	left: 0;
+	opacity: 0;
+	position: fixed;
+	/*width: 100%;*/
+
+	-webkit-transition: opacity 0.3s linear;
+	transition: opacity 0.3s linear;
+	z-index: 145;
+}
+
+/*.bx-help-header-wrap {
+	left: 0;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 4;
+}*/
+
+.bx-help-main {
+	background: linear-gradient(to right, #eef2f4 232px, #ffffff 232px) 0 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	top: 0;
+	height: 100%;
+	display: none;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	right: 0;
+	position: absolute;
+	width: 0;
+
+	-webkit-transition: width 0.3s linear;
+	transition: width 0.3s linear;
+	z-index: 250;
+}
+
+
+.bx-help-popup-loader {
+	background: url(images/help-popup-loader.png?1) no-repeat 0 0;
+	height: 230px;
+	left: 413px;
+	margin-top: 96px;
+	opacity: 0;
+	position: absolute;
+	width: 315px;
+	z-index: 1;
+	-webkit-transition: opacity 0.2s linear 0.5s;
+	transition: opacity 0.2s linear 0.5s;
+}
+
+.bx-help-popup-loader-show {
+	opacity: 1;
+}
+
+.bx-help-popup-loader-text {
+	color: #acb0b5;
+	font-size: 14px;
+	margin-top: 200px;
+	padding-left: 40px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.bx-help-close {
+	background-color: #fff;
+	display: none;
+	cursor: pointer;
+	height: 63px;
+	right: 0;
+	text-align: center;
+	opacity: 0;
+	position: fixed;
+	width: 64px;
+	z-index: 146;
+
+	-webkit-transition: opacity 0.3s linear;
+	transition: opacity 0.3s linear;
+}
+
+.bx-help-close-anim {
+	opacity: 1;
+}
+
+.bx-help-close-inner {
+	background: url(images/close-btn.png?1) no-repeat center center #fff;
+	display: inline-block;
+	height: 24px;
+	margin-top: 20px;
+	vertical-align: top;
+	width: 0;
+
+	-webkit-transition: all 0.35s linear 0.3s;
+	transition: all 0.35s linear 0.3s;
+}
+
+.bx-help-close-anim .bx-help-close-inner {
+	width: 24px;
+}
+
+.bx-help-frame {
+	border: none;
+	opacity: 0;
+	position: relative;
+	width: 100%;
+	z-index: 2;
+
+	-webkit-transition: opacity 0.3s linear;
+	transition: opacity 0.3s linear;
+}
+
+
+.bx-help-up-btn {
+	bottom: 0;
+	color: #535c69;
+	cursor: pointer;
+	font-size: 12px;
+	font-family: "OpenSans-Bold", Helvetica, Arial, sans-serif;
+	height: 0;
+	position: fixed;
+	right: 626px;
+	text-align: center;
+	width: 234px;
+
+	-webkit-transition: height 0.3s linear;
+	transition: height 0.3s linear;
+}
+
+.bx-help-up-btn-inner {
+	display: inline-block;
+	height: 37px;
+	margin-top: 22px;
+	padding-top: 35px;
+	position: relative;
+	text-transform: uppercase;
+	vertical-align: top;
+	width: 108px;
+}
+
+.bx-help-up-btn-icon {
+	background: url("/bitrix/templates/bitrix24/images/template_sprite_21.png?5") no-repeat -133px -294px;
+	height: 13px;
+	left: 50%;
+	margin-left: -21px;
+	top: 11px;
+	opacity: 0.3;
+	position: absolute;
+	width: 42px;
+
+	-webkit-transition: opacity 0.2s linear;
+	transition: opacity 0.2s linear;
+}
+
+.bx-help-up-btn:hover .bx-help-up-btn-icon {
+	opacity: 1;
+}
+
+.bx-help-nav-wrap {
+	/*height: 77px;*/
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 860px;
+	z-index: 12;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+
+	-webkit-transition: opacity 0.3s linear;
+	transition: opacity 0.3s linear, width 0.3s linear;
+}
+
+.bx-help-nav-fixed {
+	left: auto;
+	right: 0px;
+	position: fixed;
+}
+
+.bx-help-nav-border {
+	background-color: #edeef0;
+	height: 1px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.bx-help-nav-border:before {
+	background-color: #dee3e6;
+	content: '';
+	display: inline-block;
+	height: 1px;
+	vertical-align: top;
+	width: 232px;
+}
+
+.bx-help-top-title {
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.95);
+	color: #000000;
+	font-size: 28px;
+	font-family: "OpenSans-Light", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	overflow: hidden;
+}
+
+.bx-help-title-padding .bx-help-top-title {
+	padding-top: 20px;
+}
+
+.bx-help-nav-wrap .bx-help-top-title {
+	padding-top: 10px;
+	height: 52px;
+}
+
+
+.bx-help-center {
+	text-align: center;
+}
+
+.bx-help-menu-title {
+	background-color: rgba(238, 242, 244, 0.95);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #000000;
+	font-size: 22px;
+	font-family: "OpenSans-Bold", Helvetica, Arial, sans-serif;
+	float: left;
+	height: 62px;
+	padding-top: 16px;
+	width: 232px;
+	padding-left: 40px;
+	cursor: pointer;
+}
+
+.bx-help-title-padding .bx-help-menu-title {
+	padding-top: 29px;
+}
+.bx-help-blue {
+	color: #2ec6f7;
+}
+
+.bx-help-nav {
+	background-color: rgba(255,255,255,.95);
+	height: 61px;
+	padding: 0 30px 0 24px;
+	overflow: hidden;
+	opacity: 0;
+
+	-webkit-transition: opacity 0.3s linear;
+	transition: opacity 0.3s linear;
+}
+
+.bx-help-nav-show .bx-help-nav {
+	opacity: 1;
+}
+
+.bx-help-nav-btn {
+	background: url(images/help-sprite.png?1) no-repeat left -239px;
+	cursor: pointer;
+	float: left;
+	height: 61px;
+	line-height: 61px;
+	padding-left: 25px;
+}
+
+.bx-help-nav-btn-text {
+	border-bottom: 1px solid transparent;
+	color: #0b66c3;
+	font-size: 16px;
+}
+
+.bx-help-nav-title {
+	font-size: 18px;
+	font-weight: bold;
+	float: right;
+	height: 61px;
+	line-height: 60px;
+}
+
+.bx-help-start {
+	height: 334px;
+	top: 53px;
+	right: 5px;
+	position: absolute;
+	width: 147px;
+	z-index: 995;
+}
+
+
+.bx-ie8 iframe,
+.bx-ie9 iframe {
+	background: none;
+}
+
+.bx-ie8 .bx-help-main,
+.bx-ie9 .bx-help-main {
+	overflow: visible;
+}
+
+.bx-ie8 .bx-help-frame,
+.bx-ie9 .bx-help-frame {
+	min-height: 100%;
+}
+
+.bx-ie8 .bx-help-menu-title,
+.bx-ie9 .bx-help-menu-title {
+	background-color: #eef2f4;
+}
+.bx-ie8 .bx-help-nav,
+.bx-ie9 .bx-help-nav {
+	background-color: #ffffff;
+}
