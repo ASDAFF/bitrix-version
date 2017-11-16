@@ -1,0 +1,4 @@
+<?
+$MESS["IDEA_USER_IDEA_LIST_MINE"] = "My ideas";
+$MESS["IDEA_USER_IDEA_LIST_USER"] = "#USER_NAME#'s ideas";
+?>

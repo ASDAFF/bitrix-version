@@ -1,0 +1,50 @@
+.feed-comments-block .feed-com-all-hide {display: none;}
+.blog-post-popup-menu .menu-popup-item-icon, .blog-comment-popup-menu .menu-popup-item-icon{width:0px;}
+.feed-com-block-hidden{background-color: #F0F0F0;}
+.blog-comment-wait { height: 31px; width: 31px; background: url(images/wait.gif) no-repeat 0 0;}
+
+#microblog-link .blog-post-new-link {
+	cursor: text;
+	border: 1px solid #C2C2C2;
+	border-radius: 2px;
+	color: #999;
+	display: block;
+	height: 30px;
+	text-align: left;
+	font-family: arial;
+	line-height:30px;
+}
+#microblog-link .blog-post-new-link span {padding-left:10px;}
+
+.feed-post-text-block table.data-table, .feed-com-text table.data-table {border-collapse: collapse;}
+.feed-post-text-block table.data-table td, .feed-com-text table.data-table td, .feed-post-text-block table.data-table th, .feed-com-text table.data-table th {border: 1px solid grey; padding: 3px;}
+
+table.blogquote, table.blogcode { font-size:1em; margin:0.5em 1em; width:80%; border:1px solid;}
+table.blogquote td, table.blogcode td { padding:0.95em 1.5em; }
+table.blogcode td {font-family:"Courier New"; white-space:pre-wrap;}
+table.blogcode pre {font-family:"Courier New"; font-size: 12px; margin: 0; line-height: 15px; white-space:pre-wrap;}
+
+div.blog-post-quote, div.blog-post-code {padding-top: 0.6em; padding-bottom: 0.6em;}
+div.blog-post-quote span, div.blog-post-code span {padding-left:0.6em;}
+div.blog-post-quote table.blogquote, div.blog-post-code table.blogcode {margin: 0;}
+
+div.blog-post-quote span, div.blog-post-code span {color: #7d7d7d; display: none;}
+div.blog-post-code table.blogcode { border-color: #E8E8E8; color: #7D7D7D; background-color: #F7F7F7;}
+div.blog-post-quote table.blogquote { border-color: #E8E8E8; color: #555; background: url(images/quote-gray.png) no-repeat scroll left top #f7f7f;}
+
+.feed-add-post-block .feed-cancel-com {margin-top: 15px;}
+.feed-com-add-block .feed-add-photo-block {width: 102px;}
+.feed-add-img-title {overflow: hidden;}
+
+.feed-destination-edit {
+	height: 23px;
+	width: 23px;
+	margin: -2px 5px 0 8px;
+	background: url(images/pnc.png) no-repeat -1px -7px;
+	position: absolute;
+	cursor: pointer;
+	display: none;
+}
+.feed-destination-edit:hover {background: url(images/pnc.png) no-repeat -24px -7px;}
+.feed-destination-edit.feed-destination-edit-pressed {background: url(images/pnc.png) no-repeat -50px -7px;}
+.feed-post-title-block:hover .feed-destination-edit{display: inline-block};

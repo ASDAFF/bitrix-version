@@ -1,0 +1,13 @@
+/*Menu icon*/
+#advertising_menu_icon {background-image:url(icons/advertising/mnu_advertising.gif);}
+#advertising_page_icon {background-image:url(icons/advertising/title.gif);}
+
+/*Toolbar icons*/
+#btn_adv_graph {background-image:url(icons/advertising/graph.gif);}
+#btn_adv_diagram {background-image:url(icons/advertising/diagram.gif);}
+#btn_adv_edit {background-image:url(icons/advertising/edit.gif);}
+#btn_adv_view {background-image:url(icons/advertising/view.gif);}
+
+/*Common actions icons */
+div.popupitem div.adv_graph {background-image:url(icons/advertising/graph.gif);}
+div.popupitem div.adv_diagram {background-image:url(icons/advertising/diagram.gif);}

@@ -1,0 +1,316 @@
+.feed-add-grat-block {
+	background-color:#f2f6f7;
+	border-radius:2px;
+	margin-bottom:15px;
+	padding:23px 24px 23px 86px;
+	position:relative;
+}
+
+.feed-add-grat-medal{
+	background:none;
+	top:15px;
+	left:18px;
+	text-align:center;
+	padding-top:47px;
+	position:absolute;
+	width:50px;
+}
+
+.feed-add-grat-box.feed-add-grat-medal-heart,
+.feed-add-grat-medal.feed-add-grat-medal-heart {
+	background-image: url("/bitrix/components/bitrix/socialnetwork.log.ex/templates/.default/images/log/medals.png");
+	background-repeat: no-repeat;
+	background-position: -13px -8px;
+}
+.feed-add-grat-box.feed-add-grat-medal-gift,
+.feed-add-grat-medal.feed-add-grat-medal-gift {
+	background-image: url("/bitrix/components/bitrix/socialnetwork.log.ex/templates/.default/images/log/medals.png");
+	background-repeat: no-repeat;
+	background-position: -74px -8px;
+}
+.feed-add-grat-box.feed-add-grat-medal-cup,
+.feed-add-grat-medal.feed-add-grat-medal-cup {
+	background-image: url("/bitrix/components/bitrix/socialnetwork.log.ex/templates/.default/images/log/medals.png");
+	background-repeat: no-repeat;
+	background-position: -135px -8px;
+}
+.feed-add-grat-box.feed-add-grat-medal-money,
+.feed-add-grat-medal.feed-add-grat-medal-money {
+	background-image: url("/bitrix/components/bitrix/socialnetwork.log.ex/templates/.default/images/log/medals.png");
+	background-repeat: no-repeat;
+	background-position: -196px -8px;
+}
+.feed-add-grat-box.feed-add-grat-medal-crown,
+.feed-add-grat-medal.feed-add-grat-medal-crown {
+	background-image: url("/bitrix/components/bitrix/socialnetwork.log.ex/templates/.default/images/log/medals.png");
+	background-repeat: no-repeat;
+	background-position: -257px -8px;
+}
+.feed-add-grat-box.feed-add-grat-medal-drink,
+.feed-add-grat-medal.feed-add-grat-medal-drink {
+	background-image: url("/bitrix/components/bitrix/socialnetwork.log.ex/templates/.default/images/log/medals.png");
+	background-repeat: no-repeat;
+	background-position: -318px -8px;
+}
+.feed-add-grat-box.feed-add-grat-medal-cake,
+.feed-add-grat-medal.feed-add-grat-medal-cake {
+	background-image: url("/bitrix/components/bitrix/socialnetwork.log.ex/templates/.default/images/log/medals.png");
+	background-repeat: no-repeat;
+	background-position: -379px -8px;
+}
+.feed-add-grat-box.feed-add-grat-medal-thefirst,
+.feed-add-grat-medal.feed-add-grat-medal-thefirst {
+	background-image: url("/bitrix/components/bitrix/socialnetwork.log.ex/templates/.default/images/log/medals.png");
+	background-repeat: no-repeat;
+	background-position: -13px -191px;
+}
+.feed-add-grat-box.feed-add-grat-medal-flag,
+.feed-add-grat-medal.feed-add-grat-medal-flag {
+	background-image: url("/bitrix/components/bitrix/socialnetwork.log.ex/templates/.default/images/log/medals.png");
+	background-repeat: no-repeat;
+	background-position: -74px -191px;
+}
+.feed-add-grat-box.feed-add-grat-medal-star,
+.feed-add-grat-medal.feed-add-grat-medal-star {
+	background-image: url("/bitrix/components/bitrix/socialnetwork.log.ex/templates/.default/images/log/medals.png");
+	background-repeat: no-repeat;
+	background-position: -135px -191px;
+}
+.feed-add-grat-box.feed-add-grat-medal-thumbsup,
+.feed-add-grat-medal.feed-add-grat-medal-thumbsup {
+	background-image: url("/bitrix/components/bitrix/socialnetwork.log.ex/templates/.default/images/log/medals.png");
+	background-repeat: no-repeat;
+	background-position: -196px -191px;
+}
+.feed-add-grat-box.feed-add-grat-medal-beer,
+.feed-add-grat-medal.feed-add-grat-medal-beer {
+	background-image: url("/bitrix/components/bitrix/socialnetwork.log.ex/templates/.default/images/log/medals.png");
+	background-repeat: no-repeat;
+	background-position: -257px -191px;
+}
+.feed-add-grat-box.feed-add-grat-medal-flowers,
+.feed-add-grat-medal.feed-add-grat-medal-flowers {
+	background-image: url("/bitrix/components/bitrix/socialnetwork.log.ex/templates/.default/images/log/medals.png");
+	background-repeat: no-repeat;
+	background-position: -318px -191px;
+}
+.feed-add-grat-box.feed-add-grat-medal-smile,
+.feed-add-grat-medal.feed-add-grat-medal-smile {
+	background-image: url("/bitrix/components/bitrix/socialnetwork.log.ex/templates/.default/images/log/medals.png");
+	background-repeat: no-repeat;
+	background-position: -379px -191px;
+}
+.feed-add-grat-medal-other {
+	color:#9ea3a9;
+	cursor:pointer;
+	font-size:11px;
+	text-shadow:0 1px #f8fafb;
+	padding:3px 10px 0 0;
+}
+
+.feed-add-grat-medal-arrow{
+	background:url("/bitrix/components/bitrix/socialnetwork.log.ex/templates/.default/images/log/live_feed_sprite_3.png") no-repeat -132px -698px;
+	height:4px;
+	bottom:7px;
+	right:2px;
+	position:absolute;
+	width:6px;
+}
+
+.feed-add-grat-label {
+	background:url("/bitrix/components/bitrix/socialnetwork.log.ex/templates/.default/images/log/live_feed_sprite_3.png") no-repeat -144px -40px;
+	font-size:13px;
+	color:#858788;
+	float:left;
+	margin-top:10px;
+	padding:0 0 0 20px;
+}
+
+.feed-add-grat-popup {
+	background-color:#fff;
+	padding:5px;
+}
+
+.feed-add-grat-list-title {
+	color:#555;
+	font-size:12px;
+	font-weight:bold;
+	margin: 0 20px 12px 0;
+	white-space:nowrap;
+}
+
+.feed-add-grat-list {
+	background-color:#f8fafb;
+	border-radius:2px;
+	text-align:left;
+}
+
+.feed-add-grat-box {
+	background-image: none;
+	display:inline-block;
+	border-radius:3px;
+	cursor:pointer;
+	height:53px;
+	margin:4px;
+	vertical-align:top;
+	width:51px;
+}
+
+.feed-add-grat-box:hover {background-color:#e3ebed;}
+
+.feed-add-grat-box:active {
+	box-shadow:inset 0 1px 0 #bfc5c7, inset 0 1px 1px 1px #cbd2d4;
+}
+
+.feed-grat-star {background-position:center 0;}
+
+.feed-add-grat-form {
+	overflow:hidden;
+	padding-left:17px;
+}
+
+.feed-add-grat-form .feed-add-post-grat-wrap {
+	background-color:#fff;
+	min-height:31px;
+	border-color:#d0d3d5 #d2d6d8 #d5d9db;
+	box-shadow:0 1px 2px #d6d6d6 inset;
+}
+
+.feed-add-grat-input-box { display: none;}
+
+.feed-add-post-grat {border:1px solid; border-radius:2px; -moz-box-shadow:inset 0 2px 0 -1px rgba(255,255,255,0.6),0 1px 2px -1px rgba(164,164,164,0.6); -webkit-box-shadow:inset 0 2px 0 -1px rgba(255,255,255,0.6),0 1px 2px -1px rgba(164,164,164,0.6); box-shadow:inset 0 2px 0 -1px rgba(255,255,255,0.6),0 1px 2px -1px rgba(164,164,164,0.6); font-size:12px; display:inline-block; font-weight:bold; margin:0 9px 9px 0; overflow:hidden; text-shadow:0 1px 0 rgba(255, 255, 255, 0.8); padding:0 11px; position:relative; vertical-align:middle; z-index:2;}
+.feed-add-post-grat a:link, .feed-add-post-grat a:visited, .feed-add-post-grat a:active, .feed-add-post-grat a:hover {text-decoration:none;}
+.feed-add-post-grat-wrap .feed-add-post-grat {padding-right:23px;}
+
+.feed-add-grat-link {background:url("/bitrix/components/bitrix/socialnetwork.log.ex/templates/.default/images/log/live_feed_sprite_3.png") no-repeat -148px -475px; color:#2067b0; display:inline-block; font-weight:bold; font-size:12px; margin:0 9px 9px 0; line-height:20px; vertical-align:middle; padding-left:14px;}
+.feed-add-grat-inp {background:#fff; border:none; color:#555; display:inline-block; font-size:12px; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; margin:0 9px 9px 0; height:20px; min-width:108px; outline:none; padding:0; vertical-align:middle;}
+
+.feed-add-post-form-variants {padding:0 0 15px 6px; position:relative; min-height: 19px;}
+.bx-quirks .feed-add-post-form-variants { zoom: 1;}
+
+.feed-add-post-form-arrow {
+	background:url("/bitrix/components/bitrix/socialnetwork.log.ex/templates/.default/images/log/live_feed_sprite_3.png") no-repeat -97px -728px;
+	bottom:-4px;
+	-webkit-transition:left 0.3s ease-in-out;
+	-moz-transition:left 0.3s ease-in-out;
+	-ms-transition:left 0.3s ease-in-out;
+	-o-transition:left 0.3s ease-in-out;
+	transition:left 0.3s ease-in-out;
+	height:10px;
+	position:absolute;
+	width:14px;
+	z-index: 99;
+}
+
+.feed-add-post-form-link {
+	display:inline-block;
+	color:#c5c8ca;
+	cursor:pointer;
+	height:19px;
+	line-height:19px;
+	margin-right:26px;
+	padding-left:27px;
+	position:relative;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.bx-quirks .feed-add-post-form-link { float: left; }
+
+.feed-add-post-form-link:hover {color:#b4b7bb;}
+
+.feed-add-post-form-link-active {color:#515a65 !important;}
+
+.feed-add-post-form-message-link-icon,
+.feed-add-post-form-file-link-icon,
+.feed-add-post-form-polls-link-icon,
+.feed-add-post-form-grat-link-icon {
+	background:url("/bitrix/components/bitrix/socialnetwork.log.ex/templates/.default/images/log/live_feed_sprite_3.png") no-repeat 100px 100px;
+	height:16px;
+	top:2px;
+	left:0;
+	position:absolute;
+	width:16px;
+}
+
+.feed-add-post-form-message-link-icon {background-position:-42px -700px;}
+.feed-add-post-form-file-link-icon {background-position:-35px -751px; left:6px}
+.feed-add-post-form-polls-link-icon {background-position:-75px -701px; left:6px}
+.feed-add-post-form-grat-link-icon {background-position:-104px -698px; top:2px;}
+
+.feed-add-post-form-link-active .feed-add-post-form-message-link-icon {background-position:0 -727px;}
+.feed-add-post-form-link-active .feed-add-post-form-file-link-icon {background-position:-2px -751px;}
+.feed-add-post-form-link-active .feed-add-post-form-polls-link-icon {background-position:-34px -728px;}
+.feed-add-post-form-link-active .feed-add-post-form-grat-link-icon {background-position:-67px -725px; }
+
+
+/*==============================================================================ADD FILE BLOCK=========================================================================*/
+
+.feed-add-file-form-light-table {
+	border:0;
+	border-spacing:10px;
+	padding:0;
+	width:100%;
+}
+
+.feed-add-file-form-light-cell {
+	background:#f4f8f9;
+	border-radius:3px;
+	-webkit-box-shadow:inset 0 1px 2px #e4e8e9;
+	box-shadow:inset 0 1px 2px #d9ddde;
+	border:1px solid #ced0d1;
+	padding:17px 0;
+	vertical-align:middle;
+	width:50%;
+}
+
+/*.feed-add-file-form-light-cell:first-child {padding:6px 5px 3px 7px;}*/
+
+.feed-add-file-form-light {
+	display:block;
+}
+
+.feed-add-file-form-light-text {
+	border:2px dashed #f4f8f9;
+	border-radius:5px;
+	display:block;
+	min-height:44px;
+	margin:0 auto;
+	padding:8px 0 8px;
+	position:relative;
+	width:83%;
+}
+
+.feed-add-file-form-light-hover .feed-add-file-form-light-text {
+	border-color:#a7b0b5;
+}
+
+.feed-add-file-form-light-title {
+	display:block;
+	color:#2067b0;
+	cursor:pointer;
+	font-size:17px;
+	font-weight:bold;
+	text-align:center;
+	overflow:hidden;
+	position:relative;
+}
+
+.feed-add-file-form-light-title:hover .feed-add-file-form-light-title-text {text-decoration:underline;}
+
+.feed-add-file-form-light-title input {
+	font-size: 120px;
+	height: 85px;
+	left: -250px;
+	opacity: 0;
+	position: absolute;
+	top: -20px;
+	cursor: pointer;
+}
+
+.feed-add-file-form-light-descript {
+	color:#9399a0;
+	display:block;
+	font-size:12px;
+	text-align:center;
+}
+/*==============================================================================END ADD FILE BLOCK=========================================================================*/

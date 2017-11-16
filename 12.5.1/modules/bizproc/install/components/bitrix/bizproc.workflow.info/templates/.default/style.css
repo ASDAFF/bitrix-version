@@ -1,0 +1,41 @@
+table.bizproc-task-form
+{
+	width: 100%;
+	border: 1px solid #ABC4D0;
+	border-collapse:collapse;
+	padding: 0px;
+
+}
+table.bizproc-task-form td, table.bizproc-task-form tbody td
+{
+	font-weight:normal;
+	font-size:11px;
+	border:none;
+	padding:7px;
+}
+
+table.bizproc-task-form th
+{
+	font-weight:normal;
+	font-size:12px;
+	background-color:#F0F5F7;
+	padding: 7px;
+	border:none;	
+}
+
+table.bizproc-task-form th.bizproc-task-form-small
+{
+	font-size:11px;
+}
+
+table.bizproc-task-form-smile tbody td, table.bizproc-task-form-smile td
+{
+	border:none;
+	padding:3px;
+}
+
+.bizproc-task-required-field
+{
+	font-weight:bold;
+	color:#FF0000;
+}

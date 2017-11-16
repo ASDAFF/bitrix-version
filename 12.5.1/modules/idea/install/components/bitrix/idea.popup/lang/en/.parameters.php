@@ -1,0 +1,29 @@
+<?
+$MESS["BC_NAME_TEMPLATE"] = "Name display template";
+$MESS["BC_NAME_TEMPLATE_DEFAULT"] = "#NOBR##NAME# #LAST_NAME##/NOBR#";
+$MESS["BC_SHOW_LOGIN"] = "Show login if name is missing";
+$MESS["IDEA_DISABLE_RSS"] = "Disable RSS";
+$MESS["BC_SEF_PATH_POST_RSS"] = "RSS post comments address";
+$MESS["BC_SEF_PATH_RSS"] = "Blog RSS address";
+$MESS["BC_SEF_PATH_RSS_STATUS"] = "Blog RSS with status URL";
+$MESS["BC_SEF_PATH_RSS_CATEGORY"] = "Blog RSS with category URL";
+$MESS["BC_SEF_PATH_RSS_CATEGORY_STATUS"] = "Blog RSS with status and category URL";
+$MESS["BC_SEF_PATH_RSS_USER_IDEAS"] = "Ideas blog RSS URL";
+$MESS["BC_SEF_PATH_RSS_USER_IDEAS_STATUS"] = "Ideas blog RSS with status URL";
+$MESS["ONE_BLOG_BLOG_URL"] = "Blog";
+$MESS["BC_POST_IBLOCK_CATOGORIES"] = "Category structure information block";
+$MESS["IDEA_PARAM_POST_BIND_STATUS_DEFAULT"] = "Default status for new ideas";
+$MESS["BC_MESSAGE_COUNT"] = "Number of ideas in category";
+$MESS["CATOGORIES_CNT"] = "Number of categories";
+$MESS["B_SHOW_RATING"] = "Use ratings";
+$MESS["IDEA_PARAM_RATING_TEMPLATE_TITLE"] = "Rating template";
+$MESS["IDEA_PARAM_RATING_TEMPLATE_STANDART"] = "Standard";
+$MESS["IDEA_PARAM_RATING_TEMPLATE_LIKE"] = "I like it (light)";
+$MESS["IDEA_PARAM_PATH_IDEA_INDEX"] = "Ideas list path";
+$MESS["IDEA_PARAM_PATH_IDEA_POST"] = "Idea details path";
+$MESS["IDEA_PARAM_BUTTON_COLOR"] = "Button background color";
+$MESS["IDEA_PARAM_FORGOT_PASSWORD_URL"] = "Registration page";
+$MESS["IDEA_PARAM_REGISTER_URL"] = "Forgotten password page";
+$MESS["IDEA_DISABLE_SONET_LOG"] = "Disable Activity Stream notifications";
+$MESS["IDEA_DISABLE_EMAIL"] = "Disable e-mail notifications";
+?>

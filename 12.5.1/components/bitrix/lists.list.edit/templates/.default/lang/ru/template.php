@@ -1,0 +1,29 @@
+<?
+$MESS["CT_BLLE_TOOLBAR_LIST_TITLE"] = "Просмотр и правка элементов списка";
+$MESS["CT_BLLE_TOOLBAR_FIELDS"] = "Поля списка";
+$MESS["CT_BLLE_TOOLBAR_FIELDS_TITLE"] = "Настроить поля списка";
+$MESS["CT_BLLE_TOOLBAR_DELETE"] = "Удалить список";
+$MESS["CT_BLLE_TOOLBAR_DELETE_TITLE"] = "Удаляет список и всю связанную с ним информацию";
+$MESS["CT_BLLE_TOOLBAR_DELETE_WARNING"] = "Вы уверены, что хотите удалить этот список?";
+$MESS["CT_BLLE_TAB_EDIT"] = "Настройки";
+$MESS["CT_BLLE_TAB_EDIT_TITLE"] = "Основные настройки списка";
+$MESS["CT_BLLE_FIELD_NAME"] = "Название списка";
+$MESS["CT_BLLE_FIELD_SORT"] = "Сортировка";
+$MESS["CT_BLLE_FIELD_PICTURE"] = "Картинка";
+$MESS["CT_BLLE_TAB_MESSAGES"] = "Подписи";
+$MESS["CT_BLLE_TAB_MESSAGES_TITLE"] = "Подписи к элементам и разделам списка";
+$MESS["CT_BLLE_FIELD_ELEMENTS_NAME"] = "Элементы";
+$MESS["CT_BLLE_FIELD_ELEMENT_NAME"] = "Элемент";
+$MESS["CT_BLLE_FIELD_ELEMENT_ADD"] = "Добавить элемент";
+$MESS["CT_BLLE_FIELD_ELEMENT_EDIT"] = "Изменить элемент";
+$MESS["CT_BLLE_FIELD_ELEMENT_DELETE"] = "Удалить элемент";
+$MESS["CT_BLLE_FIELD_SECTIONS_NAME"] = "Разделы";
+$MESS["CT_BLLE_FIELD_SECTION_NAME"] = "Раздел";
+$MESS["CT_BLLE_FIELD_SECTION_ADD"] = "Добавить раздел";
+$MESS["CT_BLLE_FIELD_SECTION_EDIT"] = "Изменить раздел";
+$MESS["CT_BLLE_FIELD_SECTION_DELETE"] = "Удалить раздел";
+$MESS["CT_BLLE_TAB_ACCESS"] = "Доступ";
+$MESS["CT_BLLE_TAB_ACCESS_TITLE"] = "Управление правами доступа к элементам и разделам списка";
+$MESS["CT_BLLE_ACCESS_RIGHTS"] = "Группы пользователей, имеющие доступ к списку";
+$MESS["CT_BLLE_FIELD_BIZPROC"] = "Включить поддержку бизнес-процессов";
+?>

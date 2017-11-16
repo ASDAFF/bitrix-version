@@ -1,0 +1,22 @@
+div.learn-self-test-icon
+{
+	width:21px;
+	height:16px;
+	background-image:url(images/selftest.gif);
+	background-repeat:no-repeat;
+}
+
+.float-left
+{
+	float:left;
+}
+
+.float-right
+{
+	float:right;
+}
+
+.float-clear
+{
+	clear:both;
+}

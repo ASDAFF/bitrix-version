@@ -1,0 +1,18 @@
+table.lists-table tr
+{
+	vertical-align:top;
+}
+
+td.lists-table-td
+{
+	padding-bottom:16px;
+}
+
+div.lists-list-image
+{
+	border:solid 1px #cfcfcf;
+	padding:2px;
+	width:156px;
+	height:156px;
+	box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;
+}

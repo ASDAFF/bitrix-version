@@ -1,0 +1,11 @@
+/*Menu icons*/
+#mail_menu_icon {background-image:url(icons/mail/mnu_mail.gif);}
+#mail_page_icon {background-image:url(icons/mail/title.gif);}
+
+/*Mail icons*/
+div.mail-message {width:17px; height:17px; float:left; background-image:url(icons/mail/message.gif);}
+div.mail-message-notspam {width:17px; height:17px; float:left; background-image:url(icons/mail/message_notspam.gif);}
+div.mail-message-spam {width:17px; height:17px; float:left; background-image:url(icons/mail/message_spam.gif);}
+div.mail-message-unread {width:17px; height:17px; float:left; background-image:url(icons/mail/message_unread.gif);}
+div.mail-message-unread-notspam {width:17px; height:17px; float:left; background-image:url(icons/mail/message_unread_notspam.gif);}
+div.mail-message-unread-spam {width:17px; height:17px; float:left; background-image:url(icons/mail/message_unread_spam.gif);}
